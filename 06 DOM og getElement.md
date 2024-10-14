@@ -3,9 +3,9 @@
 
 ## Hva er DOM?
 
-**DOM** står for **Document Object Model** og er en representasjon av HTML-dokumentet som JavaScript kan interagere med. DOM gir deg muligheten til å manipulere innholdet på nettsiden dynamisk, som for eksempel å endre tekst, stiler, legge til eller fjerne elementer, og mer.
+**DOM** står for **Document Object Model** og er en måte for å "se" og "interagere" med HTML-dokumentet. Med DOM får du muligheten til å endre ting på nettsiden dynamisk, som å endre tekst, farger, legge til eller fjerne elementer.
 
-Når nettleseren laster en nettside, skaper den et DOM-tre basert på HTML-dokumentet. Hvert element på nettsiden, som `div`, `p`, `h1`, eller `input`, blir representert som et "node" (en node) i DOM-treet.
+Når nettleseren laster en nettside, lager den et DOM-tre basert på HTML-en. Hvert element på nettsiden (som `div`, `p`, `h1`) blir en "node" i dette treet, som JavaScript kan endre.
 
 ### Eksempel på enkel HTML
 
@@ -26,11 +26,11 @@ Når nettleseren laster en nettside, skaper den et DOM-tre basert på HTML-dokum
 </html>
 ```
 
-I dette eksempelet har vi et `h1`-element, et avsnitt, og en knapp.
+I dette eksempelet har vi en overskrift (`h1`), et avsnitt (`p`), og en knapp (`button`). 
 
-## `getElementById`
+## Hva gjør `getElementById`
 
-Metoden `getElementById` er en av de vanligste måtene å få tilgang til elementer i DOM-en på. Denne metoden returnerer et referanse til et HTML-element basert på dets `id`-attributt.
+Metoden `getElementById` lar oss få tak i et bestemt HTML-element ved å bruke dets id-attributt. Når vi har fått tak i elementet, kan vi gjøre hva vi vil med det, som å endre tekst, farger eller andre stiler.
 
 ```javascript
 // Få tilgang til h1-elementet med id="header"
@@ -40,11 +40,11 @@ let header = document.getElementById("header");
 console.log(header.textContent);
 ```
 
-I koden ovenfor finner vi `h1`-elementet ved hjelp av `getElementById` og skriver ut teksten i konsollen.
+Her får vi tak i overskriften (h1) ved hjelp av getElementById og skriver ut teksten som er inni overskriften.
 
 ### Endre innhold med JavaScript
 
-Nå som vi har tilgang til et element, kan vi endre dets innhold eller andre egenskaper.
+Nå som vi har tilgang til et element, kan vi endre dets innhold eller stil.
 
 ```javascript
 // Endre innholdet i h1-elementet
@@ -55,7 +55,7 @@ Dette vil endre teksten fra "Hei, verden!" til "Velkommen til DOM-manipulering!"
 
 ## Interaksjon med knapper
 
-Vi kan også bruke DOM for å gjøre nettsiden mer interaktiv. La oss for eksempel endre teksten i avsnittet når knappen blir klikket.
+Vi kan også bruke DOM for å gjøre nettsiden mer interaktiv. For eksempel kan vi endre tekst når en knapp trykkes.
 
 ### JavaScript for å endre tekst når knappen klikkes
 
@@ -70,7 +70,7 @@ button.addEventListener("click", function() {
 });
 ```
 
-I dette eksempelet legger vi til en `click`-hendelse på knappen. Når knappen trykkes, endrer vi teksten i avsnittet.
+I dette eksempelet legger vi til en `click`-hendelse på knappen. Når knappen trykkes, endrer vi teksten i avsnittet til "Teksten har blitt endret!".
 
 ---
 

@@ -6,7 +6,7 @@ I JavaScript kan vi bruke ulike **mouse events** for å interagere med nettsider
 ## 1. Mouse Events
 
 ### `click`-hendelsen
-`click`-hendelsen skjer når brukeren klikker på et element.
+`click`-hendelsen oppstår når brukeren klikker på et element.
 
 ```javascript
 let button = document.getElementById("myButton");
@@ -14,9 +14,11 @@ button.addEventListener("click", function() {
     console.log("Knappen ble klikket!");
 });
 ```
+Når brukeren klikker på knappen (`myButton`), skrives "Knappen ble klikket!" i konsollen.
 
 ### `mouseover` og `mouseout`
-`mouseover` skjer når musen flyttes over et element, mens `mouseout` skjer når musen flyttes ut av elementet.
+`mouseover`: Når musen flyttes over et element.
+`mouseout`: Når musen flyttes ut av elementet.
 
 ```javascript
 let box = document.getElementById("myBox");
@@ -30,15 +32,19 @@ box.addEventListener("mouseout", function() {
 });
 ```
 
+I dette eksempelet endres bakgrunnsfargen på `myBox` når musen flyttes over, og settes tilbake når musen flyttes ut.
+
 ## 2. Musekoordinater
 
-Når musen beveger seg over nettsiden, kan vi hente posisjonen til musen med koordinatene `clientX` og `clientY`. Disse gir deg x- og y-posisjonene til musepekeren i forhold til nettsidens synlige område.
+Vi kan også finne ut hvor musen er på skjermen ved å bruke koordinatene clientX (x-posisjonen) og clientY (y-posisjonen). Disse koordinatene gir oss plasseringen av musen i forhold tildet synlige området på nettsiden.
 
 ```javascript
 document.addEventListener("mousemove", function(event) {
     console.log("X-koordinat: " + event.clientX + ", Y-koordinat: " + event.clientY);
 });
 ```
+
+Når brukeren beveger musen over nettsiden, vil musekoordinatene skrives ut i konsollen.
 
 ## 3. Kombinere musehendelser og musekoordinater
 
@@ -79,7 +85,7 @@ La oss lage et eksempel der vi viser musekoordinatene i sanntid mens brukeren be
 </html>
 ```
 
-I dette eksempelet viser vi musekoordinatene i et avsnitt mens brukeren beveger musen innenfor det definerte området (`#mouseArea`).
+Her vises musekoordinatene i en `p`-tag når brukeren beveger musen over det grå feltet (`mouseArea`).
 
 ---
 
@@ -113,7 +119,7 @@ Lag en nettside der du viser musekoordinatene når brukeren beveger musen over h
 ```
 
 ### Oppgave 2: Endre farge ved museklikk
-Lag en nettside med et område (div) der bakgrunnsfargen endres hver gang brukeren klikker på området.
+Lag en nettside med et område (`div`) der bakgrunnsfargen endres hver gang brukeren klikker på området.
 
 ```html
 <!DOCTYPE html>
