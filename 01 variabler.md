@@ -1,12 +1,13 @@
 
 # Introduksjon til variabler i JavaScript
+I JavaScript (og i programmering generelt) bruker vi **variabler** for å lagre informasjon som vi kan bruke senere. Det kan være et tall, et ord eller andre typer data.
 
-En variabel i JavaScript brukes til å lagre verdier som kan gjenbrukes senere i koden din. Det finnes flere måter å definere variabler på i JavaScript: `var`, `let`, og `const`.
+Vi kan definere variabler på tre hovedmåter i JavaScript: `var`, `let` og `const`. 
 
-## 1. `var`:
-- Dette er den eldste måten å definere variabler på i JavaScript.
+## 1. `var` - den gamle måten
+-  `var` er den eldste måten å deklarere variabler på i JavaScript og ble brukt mye før rundt 2015.
 - En variabel deklarert med `var` kan endres (reassignes) senere.
-- `var` har **funksjonsscope**, noe som betyr at den er tilgjengelig innenfor hele funksjonen den er deklarert i.
+- `var` har **funksjonsscope**, noe som betyr at den kan brukes overalt innenfor funksjonen den er deklarert i. 
 
 ```javascript
 var name = "John";
@@ -15,9 +16,10 @@ name = "Jane";
 console.log(name);  // Output: Jane
 ```
 
-## 2. `let`:
-- `let` ble introdusert i nyere versjoner av JavaScript (ES6/ES2015).
-- Variabler deklarert med `let` kan endres (reassignes) senere, men har **blokkscope**, noe som betyr at de bare er tilgjengelige innenfor blokken de er definert i.
+## 2. `let` - den moderne måten
+- `let` ble introdusert i en nyere versjon av JavaScript (ES6/ES2015).
+- En variabel deklarert med `let` kan også endres, men den kan bare brukes i den spesifikke blokken (f.eks. en `if`-setning) den er laget i. Dette kalles **blokkscope**.
+- `let` er den **anbefalte** måten å deklarere variabler på i moderne JavaScript.
 
 ```javascript
 let age = 30;
@@ -26,10 +28,10 @@ age = 31;
 console.log(age);  // Output: 31
 ```
 
-## 3. `const`:
-- `const` brukes når du vil definere en konstant, det vil si en variabel som ikke kan endres.
+## 3. `const` - for noe som ikke skal endres
+- `const` er perfekt når du vil lage en variabel som ikke skal endres.
+- Når du har definert en konstant, kan du ikke endre verdien senere.
 - `const` har også **blokkscope**, akkurat som `let`.
-- Selv om verdien ikke kan endres, kan objekter eller arrayer deklarert med `const` få endret innholdet sitt.
 
 ```javascript
 const country = "Norway";
@@ -57,7 +59,7 @@ console.log(age);
 ```
 
 ### Oppgave 2: Endre variabler
-Lag en variabel `favoriteColor` med `let`. Gi den en verdi og skriv den ut. Endre så verdien av variabelen og skriv ut den nye verdien.
+Lag en variabel `favoriteColor` med `let`. Gi den en verdi og skriv den ut. ndre så verdien av variabelen og skriv ut den nye verdien.
 
 ```javascript
 // Oppgave: Endre variabel
@@ -70,7 +72,7 @@ console.log(favoriteColor);
 ```
 
 ### Oppgave 3: Bruk av `const`
-Definer en konstant `PI` med verdien 3.14. Prøv deretter å endre verdien og observer hva som skjer.
+Definer en konstant `PI` med verdien 3.14. Prøv å endre verdien (spoiler: det vil ikke fungere!). Hva skjer?
 
 ```javascript
 // Oppgave: Bruk av const
@@ -82,7 +84,7 @@ console.log(PI);
 ```
 
 ### Oppgave 4: Variabelscope
-Skriv et program som definerer en variabel med `let` innenfor en blokk (for eksempel en `if`-setning) og prøv å bruke variabelen utenfor blokken. Hva skjer?
+Definer en variabel med `let` inne i en `if`-setning. Forsøk å bruke den utenfor `if`-setningen. Hva skjer?
 
 ```javascript
 // Oppgave: Variabelscope
@@ -95,8 +97,8 @@ if (true) {
 // console.log(blockVariable);  // Dette vil gi en feil
 ```
 
-### Oppgave 5: Bonusoppgave – Enkel kalkulator
-Lag to variabler, `num1` og `num2`, med tallverdier. Lag variabler for summen, differansen, produktet, og kvotienten av disse tallene. Skriv resultatene ut i konsollen.
+### Oppgave 5: Bonusoppgave – Lag en kalkulator
+Lag to variabler, `num1` og `num2`, og gjør noen enkle berekninger med dem. Skriv ut summen, differansen, produktet og kvotienten i konsollen. 
 
 ```javascript
 // Oppgave: Enkel kalkulator
@@ -116,4 +118,5 @@ console.log("Kvotient: " + quotient);
 
 ---
 
-Disse oppgavene gir en god start for å forstå hvordan variabler fungerer i JavaScript. Variabler er en viktig del av all programmering, så det er viktig å øve seg på å bruke dem på riktig måte!
+Disse oppgavene hjelper deg å forstå hvordan variabler fungerer i JavaScript. Husk at variabler er en av de viktigste delene av programmering, så det er viktig å øve på dem på riktig måte. Lykke til! 🚀
+
