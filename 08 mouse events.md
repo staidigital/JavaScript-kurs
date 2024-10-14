@@ -4,6 +4,8 @@
 I JavaScript kan vi bruke ulike **mouse events** for å interagere med nettsider på en dynamisk måte. Vanlige hendelser som kan fanges opp er for eksempel når brukeren klikker, holder musen over et element, eller beveger musen. I tillegg kan vi hente musekoordinatene for å lage mer interaktivt innhold.
 
 ## 1. Mouse Events
+### Hva er en Mouse Event?
+> En mouse event er en hendelse som skjer når brukeren gjør noe med musen, som å klikke eller bevege den over et element.
 
 ### `click`-hendelsen
 `click`-hendelsen oppstår når brukeren klikker på et element.
@@ -14,9 +16,14 @@ button.addEventListener("click", function() {
     console.log("Knappen ble klikket!");
 });
 ```
+
+`getElementById("myButton")` finner knappen på siden med id-en `myButton`.
+`addEventListener("click", ...)` legger til en funksjon som kjører når knappen klikkes.
+
 Når brukeren klikker på knappen (`myButton`), skrives "Knappen ble klikket!" i konsollen.
 
 ### `mouseover` og `mouseout`
+
 `mouseover`: Når musen flyttes over et element.
 `mouseout`: Når musen flyttes ut av elementet.
 
@@ -31,18 +38,20 @@ box.addEventListener("mouseout", function() {
     box.style.backgroundColor = "white";
 });
 ```
-
-I dette eksempelet endres bakgrunnsfargen på `myBox` når musen flyttes over, og settes tilbake når musen flyttes ut.
+`mouseover`: Når musen er over elementet, endres bakgrunnsfargen til lys blå.
+`mouseout`: Når musen forlater elementet, settes bakgrunnsfargen tilbake til hvit.
 
 ## 2. Musekoordinater
 
-Vi kan også finne ut hvor musen er på skjermen ved å bruke koordinatene clientX (x-posisjonen) og clientY (y-posisjonen). Disse koordinatene gir oss plasseringen av musen i forhold tildet synlige området på nettsiden.
+Når musen beveger seg over nettsiden, kan vi hente posisjonen til musen med koordinatene `clientX` og `clientY`. Disse gir deg x- og y-posisjonene til musepekeren i forhold til nettsidens synlige område.
 
 ```javascript
 document.addEventListener("mousemove", function(event) {
     console.log("X-koordinat: " + event.clientX + ", Y-koordinat: " + event.clientY);
 });
 ```
+`clientX` gir x-posisjonen (horisontal).
+`clientY` gir y-posisjonen (vertikal).
 
 Når brukeren beveger musen over nettsiden, vil musekoordinatene skrives ut i konsollen.
 
