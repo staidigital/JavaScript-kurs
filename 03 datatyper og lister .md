@@ -84,53 +84,16 @@ Lag variabler som representerer følgende:
 
 Skriv disse variablene ut i konsollen.
 
-```javascript
-// Oppgave 1
-let age = 25;
-let name = "Ola Nordmann";
-let isStudent = true;
-
-console.log(age);
-console.log(name);
-console.log(isStudent);
-```
 
 ### Oppgave 2: Enkle array-operasjoner
 Lag en array som inneholder tre av dine favorittfrukter. Skriv ut den første og den siste frukten i arrayen.
 
-```javascript
-// Oppgave 2
-let fruits = ["Eple", "Banan", "Appelsin"];
 
-console.log(fruits[0]);  // Første frukt
-console.log(fruits[fruits.length - 1]);  // Siste frukt
-```
 
 ### Oppgave 3: Legge til og fjerne elementer i en array
 Bruk push() til å legge til en ny frukt til arrayen. Bruk deretter pop() til å fjerne den siste frukten. Skriv ut arrayen etter begge operasjonene.
 
-```javascript
-// Oppgave 3
-let fruits = ["Eple", "Banan", "Appelsin"];
 
-fruits.push("Mango");  // Legger til Mango
-console.log(fruits);
-
-fruits.pop();  // Fjerner Mango
-console.log(fruits);
-```
-
-### Oppgave 4: Kombinere datatyper i en array
-Lag en array som inneholder forskjellige datatyper (f.eks. et tall, en streng, og en boolean). Bruk en for-løkke til å skrive ut hvert element i arrayen.
-
-```javascript
-// Oppgave 4
-let mixedArray = [25, "Ola Nordmann", true];
-
-for (let i = 0; i < mixedArray.length; i++) {
-  console.log(mixedArray[i]);
-}
-```
 
 ---
 
