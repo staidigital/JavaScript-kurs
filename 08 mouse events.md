@@ -4,9 +4,11 @@
 I JavaScript kan vi bruke ulike **mouse events** for å interagere med nettsider på en dynamisk måte. Vanlige hendelser som kan fanges opp er for eksempel når brukeren klikker, holder musen over et element, eller beveger musen. I tillegg kan vi hente musekoordinatene for å lage mer interaktivt innhold.
 
 ## 1. Mouse Events
+### Hva er en Mouse Event?
+> En mouse event er en hendelse som skjer når brukeren gjør noe med musen, som å klikke eller bevege den over et element.
 
 ### `click`-hendelsen
-`click`-hendelsen skjer når brukeren klikker på et element.
+`click`-hendelsen oppstår når brukeren klikker på et element.
 
 ```javascript
 let button = document.getElementById("myButton");
@@ -15,8 +17,15 @@ button.addEventListener("click", function() {
 });
 ```
 
+`getElementById("myButton")` finner knappen på siden med id-en `myButton`.
+`addEventListener("click", ...)` legger til en funksjon som kjører når knappen klikkes.
+
+Når brukeren klikker på knappen (`myButton`), skrives "Knappen ble klikket!" i konsollen.
+
 ### `mouseover` og `mouseout`
-`mouseover` skjer når musen flyttes over et element, mens `mouseout` skjer når musen flyttes ut av elementet.
+
+`mouseover`: Når musen flyttes over et element.
+`mouseout`: Når musen flyttes ut av elementet.
 
 ```javascript
 let box = document.getElementById("myBox");
@@ -29,6 +38,8 @@ box.addEventListener("mouseout", function() {
     box.style.backgroundColor = "white";
 });
 ```
+`mouseover`: Når musen er over elementet, endres bakgrunnsfargen til lys blå.
+`mouseout`: Når musen forlater elementet, settes bakgrunnsfargen tilbake til hvit.
 
 ## 2. Musekoordinater
 
@@ -39,6 +50,10 @@ document.addEventListener("mousemove", function(event) {
     console.log("X-koordinat: " + event.clientX + ", Y-koordinat: " + event.clientY);
 });
 ```
+`clientX` gir x-posisjonen (horisontal).
+`clientY` gir y-posisjonen (vertikal).
+
+Når brukeren beveger musen over nettsiden, vil musekoordinatene skrives ut i konsollen.
 
 ## 3. Kombinere musehendelser og musekoordinater
 
@@ -79,7 +94,7 @@ La oss lage et eksempel der vi viser musekoordinatene i sanntid mens brukeren be
 </html>
 ```
 
-I dette eksempelet viser vi musekoordinatene i et avsnitt mens brukeren beveger musen innenfor det definerte området (`#mouseArea`).
+Her vises musekoordinatene i en `p`-tag når brukeren beveger musen over det grå feltet (`mouseArea`).
 
 ---
 
@@ -113,7 +128,7 @@ Lag en nettside der du viser musekoordinatene når brukeren beveger musen over h
 ```
 
 ### Oppgave 2: Endre farge ved museklikk
-Lag en nettside med et område (div) der bakgrunnsfargen endres hver gang brukeren klikker på området.
+Lag en nettside med et område (`div`) der bakgrunnsfargen endres hver gang brukeren klikker på området.
 
 ```html
 <!DOCTYPE html>

@@ -1,12 +1,12 @@
 
 # Flere Selectors og Manipulering av CSS med JavaScript
 
-I tillegg til `getElementById`, som vi allerede har sett på, finnes det flere måter å velge elementer fra DOM-en på. Vi kan også bruke JavaScript til å dynamisk endre CSS-stiler på elementene vi velger.
+I JavaScript finnes det mange måter å hente ut elementer fra HTML-en. Vi kan bruke ulike selectors (velgere) for å få tak i elementene vi vil jobbe med, og deretter kan vi dynamisk endre stilene deres ved hjelp av JavaScript.
 
 ## 1. Flere Selectors
 
 ### `getElementsByClassName`
-Denne metoden returnerer en samling av alle elementer som har en gitt klasse. Siden den returnerer en samling (HTMLCollection), må du iterere gjennom samlingen for å manipulere hvert element.
+Denne metoden returnerer en samling av alle elementer som har en gitt klasse. Siden den returnerer en samling (HTMLCollection), må du bruke en løkke for å endre stil på hvert enkelt element.
 
 ```javascript
 let elements = document.getElementsByClassName("myClass");
@@ -28,7 +28,8 @@ for (let i = 0; i < paragraphs.length; i++) {
 ```
 
 ### `querySelector` og `querySelectorAll`
-`querySelector` returnerer det første elementet som samsvarer med en gitt CSS-selektor. `querySelectorAll` returnerer en NodeList med alle elementer som samsvarer med selektoren.
+`querySelector` returnerer det **første** elementet som samsvarer med en gitt CSS-selektor, mens `querySelectorAll` returnerer **alle** elementene som samsvarer med selektoren som en NodeList.
+
 
 ```javascript
 // Velg det første elementet med klassen "myClass"
@@ -46,7 +47,8 @@ allElements.forEach(function(el) {
 ## 2. Manipulering av CSS med JavaScript
 
 ### Endre CSS med `style`-egenskapen
-For å endre stilene til et element, kan du bruke `style`-egenskapen. Dette lar deg direkte endre CSS-stiler som farger, marginer, bakgrunnsfarger osv.
+Vi kan bruke `style`-egenskapen i JavaScript til å direkte endre CSS-stiler på et element, som for eksempel farge, størrelse, marginer, eller bakgrunn.
+
 
 ```javascript
 let element = document.getElementById("myElement");
@@ -104,7 +106,7 @@ Bruk `getElementsByClassName` for å velge alle elementer med en bestemt klasse,
 ```
 
 ### Oppgave 2: Bruk `querySelectorAll` til å velge elementer
-Velg alle `div`-elementer med `querySelectorAll`, og legg til en rød kant rundt dem når en knapp klikkes.
+Bruk `querySelectorAll` for å velge alle `div`-elementer, og legg til en rød kant rundt dem når en knapp trykkes.
 
 ```html
 <!DOCTYPE html>
@@ -168,4 +170,4 @@ Bruk `classList` til å veksle en klasse som endrer bakgrunnsfargen på et eleme
 
 ---
 
-Disse oppgavene gir deg erfaring med flere selectors og hvordan du kan manipulere CSS med JavaScript. Dette er viktig for å skape dynamiske og interaktive nettsider.
+Disse oppgavene vil hjelpe deg å forstå hvordan du kan bruke forskjellige selectors for å hente ut elementer fra DOM, samt hvordan du kan endre stiler dynamisk ved hjelp av JavaScript. Dette er viktige ferdigheter for å lage interaktive nettsider.

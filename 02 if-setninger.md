@@ -1,10 +1,10 @@
 
 # Introduksjon til if-setninger i JavaScript
 
-Når du har lært om variabler, er det neste steget å forstå hvordan man kan ta beslutninger i koden ved hjelp av if-setninger. If-setninger brukes til å utføre kode kun hvis en betingelse er oppfylt.
+Nå som du har lært om variabler, er det tid for å lære hvordan vi kan få koden til å ta beslutninger. Dette gjør vi med `if`-setninger. `if`-setninger hjelper datamaskinen med å gjøre noe kun når en bestemt betingelse er oppfylt, som om vi sier "hvis dette skjer, gjør dette". 
 
 ## Grunnleggende if-setning:
-En enkel if-setning sjekker om en betingelse er sann. Hvis den er det, kjøres koden innenfor klammeparentesene.
+En if-setning sjekker om noe er sant. Hvis det er sant, kjører den koden inne i klammeparentesene `{}`.
 
 ```javascript
 let age = 18;
@@ -14,10 +14,11 @@ if (age >= 18) {
 }
 ```
 
-I dette eksempelet sjekker if-setningen om `age` er større enn eller lik 18. Hvis det er sant, skriver den "Du er myndig." i konsollen.
+I dette eksempelet sjekker if-setningen om `age` er større enn eller lik 18. Hvis det er sant, vil den skrive ut "Du er myndig."
 
 ## If-else-setning:
-Hvis du ønsker å utføre en annen handling når betingelsen ikke er oppfylt, kan du bruke en if-else-setning.
+
+Noen ganger vil vi gjøre noe annet hvis betingelsen ikke er sann. Da bruker vi en `else`-setning, som betyr "ellers". 
 
 ```javascript
 let age = 16;
@@ -29,10 +30,10 @@ if (age >= 18) {
 }
 ```
 
-Her sjekker if-setningen om `age` er større enn eller lik 18. Hvis det ikke er sant, skriver den "Du er ikke myndig." i stedet.
+Her sjekker vi om `age` er større enn eller lik 18. Hvis det er **sant** skriver den ut "Du er myndig". Hvis det er **usant** skriver den ut "Du er ikke myndig." i stedet.
 
 ## If-else if-else-setning:
-Noen ganger trenger du å sjekke flere betingelser. Dette kan gjøres med en if-else if-else-struktur.
+Noen ganger har vi flere ting vi vil sjekke. Da kan vi bruke en kombinasjon av `if`, `else if` og `else` for å sjekke flere betingelser. 
 
 ```javascript
 let score = 85;
@@ -45,15 +46,17 @@ if (score >= 90) {
   console.log("Du fikk en C eller lavere.");
 }
 ```
-
-Her sjekkes først om `score` er 90 eller høyere. Hvis ikke, sjekker den om `score` er 80 eller høyere. Hvis ingen av betingelsene er sanne, skriver den "Du fikk en C eller lavere."
+I dette eksemplet sjekker vi flere ting:
+* Først sjekker vi om `score` er 90 eller mer. 
+* Hvis det ikke er sant, sjekker vi om `score` er 80 eller mer.
+* Hvis ingen av de to betingelsene er sanne, skriver den "Du fikk en C eller lavere.
 
 ---
 
 ## Oppgaver
 
 ### Oppgave 1: Sjekk tall
-Skriv en if-setning som sjekker om en variabel `number` er større enn 10. Hvis den er det, skal "Større enn 10" skrives ut, hvis ikke skal "10 eller mindre" skrives ut.
+Skriv en if-setning som sjekker om en variabel `number` er større enn 10. Hvis den er større, skriv ut "Større enn 10", ellers skriv ut "10 eller mindre".
 
 ```javascript
 // Oppgave 1
@@ -63,7 +66,7 @@ let number = 12;
 ```
 
 ### Oppgave 2: Kategori basert på alder
-Lag et program som sjekker en persons alder. Hvis personen er under 13, skal programmet skrive "Barn". Hvis personen er mellom 13 og 19, skal det skrive "Tenåring". Hvis personen er 20 eller eldre, skal det skrive "Voksen".
+Lag et program som sjekker alderen til en person. Hvis personen er under 13, skal programmet skrive "Barn". Hvis personen er mellom 13 og 19, skal det skrive "Tenåring". Hvis personen er 20 eller eldre, skal det skrive "Voksen".
 
 ```javascript
 // Oppgave 2
@@ -84,7 +87,7 @@ let password = "1234";
 ```
 
 ### Oppgave 4: Bonus – Graderingssystem
-Lag et program som tar en variabel `poeng` som verdi og gir en karakter basert på følgende betingelser:
+Lag et program som tar en variabel `poeng` og gir en karakter basert på poengene:
 - 90 eller mer: A
 - 80 eller mer: B
 - 70 eller mer: C
@@ -100,4 +103,4 @@ let poeng = 85;
 
 ---
 
-Disse oppgavene vil hjelpe deg å forstå hvordan if-setninger kan brukes til å ta beslutninger i koden din, basert på variablenes verdier.
+Disse oppgavene vil gi deg en god forståelse av hvordan du kan bruke `if`-setninger for å ta beslutninger i JavaScript. Det er viktig for å lage dynamiske og responsive nettsider. 🚀

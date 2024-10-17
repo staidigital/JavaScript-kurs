@@ -1,23 +1,23 @@
 
 # Introduksjon til datatyper og lister i JavaScript
 
-JavaScript har forskjellige datatyper som lar deg jobbe med ulike typer informasjon. For å bli komfortabel med JavaScript-programmering er det viktig å forstå disse datatypene og hvordan de brukes.
+Når vi programmerer, må vi ofte holde styr på forskjellige typer informasjon. I JavaScript finnes det flere **datatyper** som lar oss jobbe med tall, tekst og mer. Å forstå disse typene er viktig for å kunne lage god kode. 
 
 ## 1. Primitive datatyper
 JavaScript har seks primitive datatyper:
 
-- **Number**: Representerer tall, både heltall og desimaltall.
+- **Number**: Brukes for tall, enten de er heltall (som 5) eller desimaltall (som 3.14).
   ```javascript
   let age = 30;
   let pi = 3.14;
   ```
 
-- **String**: Brukes til å representere tekst.
+- **String**: Brukes for tekst. Teksten må være inni anførselstegn (enten `""` eller `''`)
   ```javascript
   let name = "Ola Nordmann";
   ```
 
-- **Boolean**: Har bare to mulige verdier: `true` eller `false`.
+- **Boolean**: Brukes for verdier som er enten `true` (sant) eller `false` (usant).
   ```javascript
   let isStudent = true;
   ```
@@ -27,7 +27,7 @@ JavaScript har seks primitive datatyper:
   let emptyValue = null;
   ```
 
-- **Undefined**: En variabel som er deklarert, men ikke tildelt noen verdi, har verdien `undefined`.
+- **Undefined**: Brukes når en variabel er deklarert, men ikke tildelt noen verdi ennå.
   ```javascript
   let notAssigned;
   ```
@@ -35,39 +35,41 @@ JavaScript har seks primitive datatyper:
 - **Symbol**: En spesiell, unik datatype som brukes sjeldnere.
 
 ## 2. Arrays (Lister)
-En array er en samling av flere verdier i én variabel. Dette gjør det lettere å lagre og jobbe med flere relaterte verdier samtidig. Arrays kan inneholde alle typer data, inkludert andre arrays.
+En **array** er en samling av flere verdier i én variabel. Dette gjør det letter å jobbe med flere verdier på én gang. Arrays kan inneholde alle typer data, inkludert andre arrays.
 
 ```javascript
 let fruits = ["Eple", "Banan", "Appelsin"];
 ```
 
-### Tilgang til elementer
-Du kan få tilgang til elementene i en array ved å bruke deres indeks (posisjon). Indeksering starter på 0 i JavaScript.
+### Tilgang til elementer i en array
+For å hente ut et element fra en array, bruker vi dets **indeks** (posisjon). Indeksering starter alltid på 0.
 
 ```javascript
-console.log(fruits[0]);  // "Eple"
-console.log(fruits[2]);  // "Appelsin"
+console.log(fruits[0]);  // Henter ut "Eple" som er det første elementet
+console.log(fruits[2]);  // Henter ut "Appelsin" som er det tredje elementet
 ```
 
-### Legge til elementer
-Du kan legge til nye elementer i en array ved å bruke metoder som `push()`.
+### Legge til elementer i en array
+For å legge til nye elementer på slutten av en array, bruker vi `push()`-metoden.
 
 ```javascript
 fruits.push("Mango");  // Legger til "Mango" på slutten
+console.log(fruits);  
 ```
 
 ### Fjerne elementer
-For å fjerne det siste elementet i en array, kan du bruke `pop()`.
+For å fjerne det siste elementet i en array, bruker vi pop()-metoden.
 
 ```javascript
 fruits.pop();  // Fjerner "Mango"
+console.log(fruits);
 ```
 
-### Lengde på array
-`length`-egenskapen gir deg antall elementer i en array.
+### Lengden på en array
+For å finne ut hvor mange elementer det er i en array, bruker vi length-egenskapen.
 
 ```javascript
-console.log(fruits.length);  // Antall elementer i arrayen
+console.log(fruits.length);  // Viser antall elementer i arrayen
 ```
 
 ---
@@ -75,11 +77,12 @@ console.log(fruits.length);  // Antall elementer i arrayen
 ## Oppgaver
 
 ### Oppgave 1: Primitive datatyper
-Lag variabler for følgende:
-- Et tall som representerer alderen din.
-- En streng som representerer navnet ditt.
-- En boolean som representerer om du er student eller ikke.
-Skriv dem ut i konsollen.
+Lag variabler som representerer følgende:
+- Din alder som et tall
+- Navnet ditt som en tekstreng
+- Om du er student eller ikke som en boolean
+
+Skriv disse variablene ut i konsollen.
 
 ```javascript
 // Oppgave 1
@@ -93,7 +96,7 @@ console.log(isStudent);
 ```
 
 ### Oppgave 2: Enkle array-operasjoner
-Lag en array med tre av dine favorittfrukter. Skriv ut den første og den siste frukten i arrayen.
+Lag en array som inneholder tre av dine favorittfrukter. Skriv ut den første og den siste frukten i arrayen.
 
 ```javascript
 // Oppgave 2
@@ -104,7 +107,7 @@ console.log(fruits[fruits.length - 1]);  // Siste frukt
 ```
 
 ### Oppgave 3: Legge til og fjerne elementer i en array
-Bruk `push()` til å legge til en ny frukt i arrayen. Bruk deretter `pop()` til å fjerne den siste frukten. Skriv ut arrayen etter begge operasjoner.
+Bruk push() til å legge til en ny frukt til arrayen. Bruk deretter pop() til å fjerne den siste frukten. Skriv ut arrayen etter begge operasjonene.
 
 ```javascript
 // Oppgave 3
@@ -117,8 +120,8 @@ fruits.pop();  // Fjerner Mango
 console.log(fruits);
 ```
 
-### Oppgave 4: Bruk av forskjellige datatyper
-Lag en array som inneholder ulike datatyper (for eksempel et tall, en streng, og en boolean). Skriv ut hvert element i arrayen ved å bruke en for-løkke.
+### Oppgave 4: Kombinere datatyper i en array
+Lag en array som inneholder forskjellige datatyper (f.eks. et tall, en streng, og en boolean). Bruk en for-løkke til å skrive ut hvert element i arrayen.
 
 ```javascript
 // Oppgave 4
@@ -131,4 +134,4 @@ for (let i = 0; i < mixedArray.length; i++) {
 
 ---
 
-Disse oppgavene vil hjelpe deg å forstå hvordan datatyper og arrays fungerer i JavaScript. Arrays er et kraftig verktøy som lar deg jobbe med flere verdier samtidig, og ved å kombinere dem med primitive datatyper kan du lage mer dynamisk kode.
+Disse oppgavene gir deg en god forståelse av hvordan ulike datatyper og arrays fungerer i JavaScript. Arrays er en kraftig måte å holde styr på flere verdier på én gang, og når du kombinerer dem med de primitive datatypene, kan du lage mer komplekse og dynamiske programmer.
