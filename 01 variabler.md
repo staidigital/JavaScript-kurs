@@ -46,75 +46,22 @@ console.log(country);  // Output: Norway
 ### Oppgave 1: Enkel variabelbruk
 Definer tre variabler: `firstName`, `lastName`, og `age`. Gi dem verdier og skriv dem ut i konsollen.
 
-```javascript
-// Definer variabler
-let firstName = "Ola";
-let lastName = "Nordmann";
-let age = 25;
-
-// Skriv ut i konsollen
-console.log(firstName);
-console.log(lastName);
-console.log(age);
-```
 
 ### Oppgave 2: Endre variabler
 Lag en variabel `favoriteColor` med `let`. Gi den en verdi og skriv den ut. ndre så verdien av variabelen og skriv ut den nye verdien.
 
-```javascript
-// Oppgave: Endre variabel
-let favoriteColor = "blue";
-console.log(favoriteColor);
-
-// Endre verdien
-favoriteColor = "green";
-console.log(favoriteColor);
-```
 
 ### Oppgave 3: Bruk av `const`
 Definer en konstant `PI` med verdien 3.14. Prøv å endre verdien (spoiler: det vil ikke fungere!). Hva skjer?
 
-```javascript
-// Oppgave: Bruk av const
-const PI = 3.14;
-console.log(PI);
-
-// Prøv å endre verdien (dette vil gi en feil)
-// PI = 3.14159;
-```
 
 ### Oppgave 4: Variabelscope
 Definer en variabel med `let` inne i en `if`-setning. Forsøk å bruke den utenfor `if`-setningen. Hva skjer?
 
-```javascript
-// Oppgave: Variabelscope
-if (true) {
-  let blockVariable = "Jeg er inni blokken";
-  console.log(blockVariable);  // Fungerer her
-}
-
-// Prøv å skrive ut variabelen her
-// console.log(blockVariable);  // Dette vil gi en feil
-```
 
 ### Oppgave 5: Bonusoppgave – Lag en kalkulator
 Lag to variabler, `num1` og `num2`, og gjør noen enkle berekninger med dem. Skriv ut summen, differansen, produktet og kvotienten i konsollen. 
 
-```javascript
-// Oppgave: Enkel kalkulator
-let num1 = 10;
-let num2 = 5;
-
-let sum = num1 + num2;
-let difference = num1 - num2;
-let product = num1 * num2;
-let quotient = num1 / num2;
-
-console.log("Sum: " + sum);
-console.log("Differanse: " + difference);
-console.log("Produkt: " + product);
-console.log("Kvotient: " + quotient);
-```
 
 ---
 

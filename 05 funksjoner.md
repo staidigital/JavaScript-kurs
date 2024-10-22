@@ -68,51 +68,35 @@ I dette eksempelet er funksjonen lagret i variabelen `greet`, og vi kan bruke de
 ### Oppgave 1: En enkel funksjon
 Lag en funksjon `sayHello`, som skriver ut "Hei, verden!" når den kalles. Kall funksjonen for å se resultatet.
 
-```javascript
-// Oppgave 1
-function sayHello() {
-  console.log("Hei, verden!");
-}
-
-sayHello();  // Kall funksjonen
-```
 
 ### Oppgave 2: Funksjoner med parametere
 Lag en funksjon `greetPerson`, som tar et navn som parameter og skriver ut "Hei, [navn]!". Kall funksjonen med ditt eget navn.
 
-```javascript
-// Oppgave 2
-function greetPerson(name) {
-  console.log("Hei, " + name + "!");
-}
-
-greetPerson("Ola");  // Kall funksjonen med ditt navn
-```
 
 ### Oppgave 3: Funksjoner som returnerer verdier
 Skriv en funksjon `multiply` som tar to tall som parametere og returnerer produktet av dem. Kall funksjonen og skriv ut resultatet.
 
-```javascript
-// Oppgave 3
-function multiply(a, b) {
-  return a * b;
-}
+### Oppgave 4: Funksjoner og lister
+Oppgavebeskrivelse:
+Skriv et program som gjør følgende:
 
-let result = multiply(4, 5);
-console.log(result);  // Output: 20
+Lag en liste med minst 5 navn.
+Bruk en løkke for å gå gjennom listen.
+Skriv ut en personlig melding til hvert navn på formatet: "Hei, navn! Velkommen!"
+Programmet skal telle antall navn i listen og til slutt skrive ut en melding som sier: "Det var x antall personer i listen."
+
+For en liste som inneholder navnene ["Anna", "Bjørn", "Cecilie", "David", "Eli"], skal programmet skrive ut:
+```
+Hei, Anna! Velkommen!
+Hei, Bjørn! Velkommen!
+Hei, Cecilie! Velkommen!
+Hei, David! Velkommen!
+Hei, Eli! Velkommen!
+Det var 5 personer i listen.
 ```
 
-### Oppgave 4: Funksjonsuttrykk
-Skriv en funksjon som lagres i en variabel `sayGoodbye`, som skriver ut "Ha det bra!" når den kalles.
-
-```javascript
-// Oppgave 4
-let sayGoodbye = function() {
-  console.log("Ha det bra!");
-};
-
-sayGoodbye();  // Kall funksjonen
-```
+**Ekstra utfordring**
+Utvid programmet slik at det sjekker om et navn inneholder mer enn 4 bokstaver. Hvis ja, skriv ut: navn, du har et langt navn!" i tillegg til den vanlige meldingen.
 
 ---
 

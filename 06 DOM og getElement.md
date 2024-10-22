@@ -79,56 +79,9 @@ I dette eksempelet legger vi til en `click`-hendelse på knappen. Når knappen t
 ### Oppgave 1: Endre overskrift med knappetrykk
 Lag et HTML-dokument med en overskrift (`h1`) og en knapp. Bruk JavaScript til å endre teksten i overskriften når knappen klikkes.
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Endre overskrift</title>
-</head>
-<body>
-    <h1 id="header">Original overskrift</h1>
-    <button id="changeHeaderButton">Endre overskrift</button>
-
-    <script>
-        let button = document.getElementById("changeHeaderButton");
-        let header = document.getElementById("header");
-
-        button.addEventListener("click", function() {
-            header.textContent = "Ny overskrift!";
-        });
-    </script>
-</body>
-</html>
-```
 
 ### Oppgave 2: Endre farge på et element
 Legg til et element med tekst og bruk JavaScript til å endre fargen på teksten når en knapp trykkes.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Endre farge</title>
-</head>
-<body>
-    <p id="text">Denne teksten skal endre farge.</p>
-    <button id="changeColorButton">Endre farge</button>
-
-    <script>
-        let button = document.getElementById("changeColorButton");
-        let text = document.getElementById("text");
-
-        button.addEventListener("click", function() {
-            text.style.color = "red";
-        });
-    </script>
-</body>
-</html>
-```
 
 ---
 

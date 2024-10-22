@@ -103,62 +103,9 @@ Her vises musekoordinatene i en `p`-tag n책r brukeren beveger musen over det gr�
 ### Oppgave 1: Vis musekoordinater
 Lag en nettside der du viser musekoordinatene n책r brukeren beveger musen over hele vinduet.
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musekoordinater</title>
-</head>
-<body>
-    <h1>Musekoordinater</h1>
-    <p id="mouseCoordinates">X: 0, Y: 0</p>
-
-    <script>
-        document.addEventListener("mousemove", function(event) {
-            let x = event.clientX;
-            let y = event.clientY;
-            let coordinates = document.getElementById("mouseCoordinates");
-            coordinates.textContent = "X: " + x + ", Y: " + y;
-        });
-    </script>
-</body>
-</html>
-```
 
 ### Oppgave 2: Endre farge ved museklikk
 Lag en nettside med et omr책de (`div`) der bakgrunnsfargen endres hver gang brukeren klikker p책 omr책det.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Klikk for 책 endre farge</title>
-    <style>
-        #colorBox {
-            width: 200px;
-            height: 200px;
-            background-color: lightgreen;
-        }
-    </style>
-</head>
-<body>
-    <div id="colorBox"></div>
-
-    <script>
-        let box = document.getElementById("colorBox");
-
-        box.addEventListener("click", function() {
-            let randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
-            box.style.backgroundColor = randomColor;
-        });
-    </script>
-</body>
-</html>
-```
 
 ---
 
